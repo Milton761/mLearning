@@ -29,16 +29,12 @@ namespace mLearning
                     new ConnectLoginPage(),
                     new SignUpPage(),
                     new UserLoginPage(),
-                    new LoginPage(),
-                    
+                    new LoginPage(),      
                 }
 
             };
             */
-
             //MainPage = new ConnectLoginPage();
-
-            
             
             if (isLoggedIn)
             {
