@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+			       xmlns:sco="clr-namespace:System.Collections;assembly=mscorlib"
+			       xmlns:lcon="clr-namespace:XLabs.Forms.Converter;assembly=XLabs.Forms"
+			       xmlns:lb="clr-namespace:XLabs.Forms.Behaviors;assembly=XLabs.Forms"
+			       xmlns:lc=  "clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:me="clr-namespace:mLearning.Data;assembly=mLearning"
+             x:Class="mLearning.Views.MainPage"
+             Title="MainPage"
+             BackgroundColor="{StaticResource color_004}">
+  
+  
+ <ContentPage.Resources>
+    <ResourceDictionary>
+      <lc:TemplateSelector x:Name="cselect" x:Key="carouselselector">
+        <lc:TemplateSelector.Templates>
+          
+          <lc:DataTemplateWrapper x:TypeArguments="me:ListViewDataExample">
+            <lc:DataTemplateWrapper.WrappedTemplate>
+              <DataTemplate>
+                <StackLayout>
+                  <Label Text="{Binding ItemText}"/>
+                  <Image Source="{Binding ImageUri}"/>
+                </StackLayout>
+              </DataTemplate>
+            </lc:DataTemplateWrapper.WrappedTemplate>
+          </lc:DataTemplateWrapper>
+        </lc:TemplateSelector.Templates>        
+      </lc:TemplateSelector>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+
+  <AbsoluteLayout Style="{StaticResource style_AbsoluteLayout}">
+
+    <lc:CarouselView 
+      x:Name="carousel_view" 
+      x:TypeArguments="me:ListViewDataExample" 
+      ViewModels="{Binding SourceListView}" 
+      TemplateSelector="{StaticResource carouselselector}" 
+      HeightRequest="100" 
+      Padding="10,25" 
+      TickColor="{StaticResource color_002}" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.2, 1, 0.25"  
+      AbsoluteLayout.LayoutFlags="All"/>
+
+    <Label 
+      Text="Personas" 
+      AbsoluteLayout.LayoutBounds="0.06, 0.40, 0.4, 0.1"  
+      YAlign="Center"
+      Font="{StaticResource font_app}"
+      AbsoluteLayout.LayoutFlags="All"/>
+
+    <ListView 
+      x:Name="listview_profiles" 
+      Rotation="90" 
+      RowHeight="84" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.16, 1"  
+      AbsoluteLayout.LayoutFlags="All"
+      SelectedItem = "null"
+      SeparatorColor="{StaticResource color_000}">
+      
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+
+              <Image 
+                Source="{Binding ImageUri}" 
+                Aspect="AspectFit" 
+                VerticalOptions="End" 
+                HorizontalOptions="End" 
+                WidthRequest="64" 
+                HeightRequest="64" 
+                Rotation="-90"/>
+
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    <ListView 
+      x:Name="comentsListView" 
+      VerticalOptions="EndAndExpand" 
+      HorizontalOptions="FillAndExpand" 
+      RowHeight="100" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.9, 1, 0.35"  
+      AbsoluteLayout.LayoutFlags="All"
+      SeparatorColor="{StaticResource color_000}">
+      
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              
+              <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand" Padding="20">
+                <Image 
+                  Source="{Binding ImageUri}" 
+                  Aspect="AspectFit" 
+                  VerticalOptions="Center" 
+                  HorizontalOptions="Center" 
+                  WidthRequest="75" 
+                  HeightRequest="75"/>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                  <Label 
+                    Text="{Binding Name}" 
+                    Font="{StaticResource font_app}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    FontSize="Small"/>
+                  
+                  <Label
+                    Text="{Binding Coment}"
+                    Font="{StaticResource font_app}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="#9C9C9C"
+                    FontSize="Small"/>    
+                
+                </StackLayout>
+                                
+                <Label 
+                  Text="{Binding Date}" 
+                  Font="{StaticResource font_app}"
+                   
+                  YAlign="End"
+                  VerticalOptions="Start" 
+                  TextColor="#9C9C9C"
+                  WidthRequest="60"
+                  FontSize="Small"/>
+              </StackLayout>
+              
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    
+    
+    <BoxView Color="#363636"
+    AbsoluteLayout.LayoutBounds="0.5, 0.99, 1, 0.09"
+    AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Image
+      Source="{StaticResource im_Coment1}"
+      Aspect="AspectFit"
+      VerticalOptions="Center"
+      AbsoluteLayout.LayoutBounds="0.298, 0.588, 0.03, 0.03"
+      AbsoluteLayout.LayoutFlags="All"/>
+
+    
+    <BoxView 
+      Color="{StaticResource color_004}"
+      AbsoluteLayout.LayoutBounds="0.5, 0.59, 1, 0.02"
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Label
+      Text="Comentarios "
+      YAlign="Center"
+      HorizontalOptions="Start"
+      AbsoluteLayout.LayoutBounds="0.06, 0.59, 0.4, 0.1"
+      AbsoluteLayout.LayoutFlags="All"/>
+
+    
+    <Image 
+      Source="{StaticResource im_Coment2}"
+      Aspect="AspectFit"
+      VerticalOptions="Center"
+      AbsoluteLayout.LayoutBounds="0.05, 0.982, 0.07, 0.07"
+      AbsoluteLayout.LayoutFlags="All"
+      />
+    <Label 
+      Text="Leave a comment"
+      Font="{StaticResource font_app}"
+      YAlign="Center"
+      TextColor="#9C9C9C"
+      FontSize="Small"
+      AbsoluteLayout.LayoutBounds="0.25, 0.99, 0.4, 0.09"
+      AbsoluteLayout.LayoutFlags="All"/>
+
+  </AbsoluteLayout>
+
+
+</ContentPage>

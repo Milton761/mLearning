@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:mLearning.CustomRenders;assembly=mLearning"
+             x:Class="mLearning.Views.UserLoginPage"
+             BackgroundImage = "{StaticResource im_ImageBackground}">
+
+  <AbsoluteLayout Style="{StaticResource style_AbsoluteLayout}">
+
+    <Image 
+      Source="user250.png" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.37, 0.3, 0.3" 
+      AbsoluteLayout.LayoutFlags="All"/>
+
+    <Label 
+      Style="{StaticResource style_Label_Login}"
+      Text="Usuario" 
+      XAlign="Center" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.58, 0.791, 0.0987" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Image
+      Source="{StaticResource im_EntryBackground}" 
+      Aspect="Fill"  
+      AbsoluteLayout.LayoutBounds="0.5, 0.64, 0.791, 0.0987" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <local:CustomEntry 
+      Placeholder="Constraseña" 
+      TextColor="#E6E6E6" 
+      IsPassword="True"
+      HorizontalOptions="Start" 
+      AbsoluteLayout.LayoutBounds="0.3, 0.64, 0.5, 0.0987" 
+      AbsoluteLayout.LayoutFlags="All"/>
+
+    <Image
+      Source="{StaticResource im_EnterButton}"
+      Aspect="AspectFit"
+      AbsoluteLayout.LayoutBounds="0.87, 0.639, 0.14, 0.085"
+      AbsoluteLayout.LayoutFlags="All">
+
+      <Image.GestureRecognizers>
+        <TapGestureRecognizer
+                  Tapped="OnTapGestureRecognizerEnterButton"
+                  NumberOfTapsRequired="1" />
+      </Image.GestureRecognizers>
+
+    </Image>
+
+  </AbsoluteLayout>
+
+</ContentPage>
