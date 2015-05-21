@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:sys="clr-namespace:System;assembly=mscorlib"
+			 xmlns:sco="clr-namespace:System.Collections;assembly=mscorlib"
+			 xmlns:lcon="clr-namespace:XLabs.Forms.Converter;assembly=XLabs.Forms"
+			 xmlns:lb="clr-namespace:XLabs.Forms.Behaviors;assembly=XLabs.Forms"
+			 xmlns:lc=  "clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+       xmlns:me="clr-namespace:mLearning.Data;assembly=mLearning"
+			 x:Class="mLearning.Views.CarouselView"
+       BackgroundColor="#1C1C1C">
+
+ <ContentPage.Resources>
+    <ResourceDictionary>
+      <lc:TemplateSelector x:Name="cselect" x:Key="carouselselector">
+        <lc:TemplateSelector.Templates>
+          
+          <lc:DataTemplateWrapper x:TypeArguments="me:ListViewDataExample">
+            <lc:DataTemplateWrapper.WrappedTemplate>
+              <DataTemplate>
+                <StackLayout>
+                  <Label Text="{Binding ItemText}"/>
+                  <Image Source="{Binding ImageUri}"/>
+                </StackLayout>
+              </DataTemplate>
+            </lc:DataTemplateWrapper.WrappedTemplate>
+          </lc:DataTemplateWrapper>
+        </lc:TemplateSelector.Templates>        
+      </lc:TemplateSelector>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+    <lc:CarouselView x:Name="carousel_view" x:TypeArguments="me:ListViewDataExample" ViewModels="{Binding SourceListView}" TemplateSelector="{StaticResource carouselselector}" HeightRequest="100" Padding="10,25" TickColor="Blue" AbsoluteLayout.LayoutBounds="0.5, 0.2, 1, 0.3"  AbsoluteLayout.LayoutFlags="All"/>
+
+    <Label Text="Personas" AbsoluteLayout.LayoutBounds="0.5, 0.85, 1, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
+
+    <ListView x:Name="listview_profiles" Rotation="90" RowHeight="84" AbsoluteLayout.LayoutBounds="0.25, 0.25, 0.16, 1"  AbsoluteLayout.LayoutFlags="All" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>  
+            <ViewCell.View>
+              
+                <Image Source="{Binding ImageUri}" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="End" WidthRequest="64" HeightRequest="64" Rotation="-90"/>
+                
+              
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+
+    <ListView x:Name="comentsListView" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" RowHeight="100" Header="COMENTARIOS" AbsoluteLayout.LayoutBounds="0.5, 0.9, 1, 0.3"  AbsoluteLayout.LayoutFlags="All">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand" >
+
+                <Image Source="{Binding ImageUri}" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="90" HeightRequest="90"/>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold"/>
+                  <Label Text="{Binding Coment}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Medium"/>
+                </StackLayout>
+                <BoxView HorizontalOptions="FillAndExpand"/>
+                <Label Text="{Binding Date}" HorizontalOptions="End" VerticalOptions="Start" YAlign="Start" XAlign="End" FontSize="Small"/>
+
+              </StackLayout>
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+  </AbsoluteLayout>  
+
+</ContentPage>
