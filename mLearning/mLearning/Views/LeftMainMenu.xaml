@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:me="clr-namespace:mLearning.Data;assembly=mLearning"
+             x:Class="mLearning.Views.LeftMainMenu"
+             Title ="Opciones"
+             BackgroundColor="#1C1C1C">
+  
+  
+<StackLayout Padding="30">
+  
+    
+    <StackLayout Orientation="Horizontal" Spacing ="20" HeightRequest="50">
+      
+      
+      <BoxView HorizontalOptions="StartAndExpand"/>
+      
+      
+      <Image 
+        Source="{StaticResource im_LogoEdutic}" 
+        Aspect="AspectFit" 
+        HorizontalOptions="Center" 
+        VerticalOptions="Center"/>
+      
+      <Label 
+        Style ="{StaticResource style_Label_LeftMainMenu001}"
+        Text="EDuTic"
+        VerticalOptions="Center" 
+        YAlign ="Center" />
+      
+      <BoxView HorizontalOptions="EndAndExpand"/>
+      
+    </StackLayout>
+ 
+      <SearchBar
+        Placeholder="Search" 
+        HorizontalOptions="Center"/>
+  
+      <Label
+        Style="{StaticResource style_Label_LeftMainMenu001}"
+        Text="CÍRCULOS"
+        HorizontalOptions="Start"/>
+
+      <ListView 
+        x:Name="itemListView" 
+        RowHeight="50"
+        SeparatorColor="{StaticResource color_000}">
+        
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                  <Image 
+                    Source="{Binding ImageUri}" 
+                    Aspect="AspectFit" 
+                    VerticalOptions="Center" 
+                    WidthRequest="15" 
+                    HeightRequest="15"/>
+                  <Label 
+                    Text="{Binding ItemText}" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="FillAndExpand" 
+                    FontSize="Medium"/>
+                </StackLayout>
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+  
+  
+
+      <ListView 
+        x:Name="itemListViewEndButtons" 
+        VerticalOptions="EndAndExpand"
+        RowHeight="50">
+        
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                  
+                  <Image 
+                    Source="{Binding ImageUri}" 
+                    Aspect="AspectFit"
+                    VerticalOptions="Center"
+                    WidthRequest="25"
+                    HeightRequest="25"/>
+                  
+                  <Label 
+                    Text="{Binding ItemText}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Medium"/>
+                  
+                </StackLayout>
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+  
+  </StackLayout>    
+</ContentPage>

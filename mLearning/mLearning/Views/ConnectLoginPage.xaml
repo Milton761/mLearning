@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:local="clr-namespace:mLearning.CustomRenders;assembly=mLearning"
+             x:Class="mLearning.Views.ConnectLoginPage"
+             BackgroundImage="{StaticResource im_ImageBackground}">
+
+  <AbsoluteLayout Style="{StaticResource style_AbsoluteLayout}">
+
+    <Image 
+      Source="{StaticResource im_LogoEdutic}"
+      AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.25, 0.25"
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Label
+      Style="{StaticResource style_Label_Login}"
+      Text="Conectar con"
+      XAlign="Center" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.45 , 1, 0.05" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Image 
+      Source="{StaticResource im_EntryBackground}" 
+      Aspect="Fill" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.553, 0.791, 0.0987" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Image 
+      Source="{StaticResource im_LogoFacebook}" 
+      Aspect="AspectFit" 
+      AbsoluteLayout.LayoutBounds="0.87, 0.553, 0.14, 0.09"
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Label 
+      Style="{StaticResource style_Label_Login001}"
+      Text="Facebook"
+      XAlign="Start" 
+      YAlign="Center" 
+      VerticalOptions="Center"
+      AbsoluteLayout.LayoutBounds="0.5, 0.553, 0.67, 0.0987"
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <!--BoxView AbsoluteLayout.LayoutBounds="0.5, 0.55, 0.75, 0.1" Color="Red" AbsoluteLayout.LayoutFlags="All"/-->
+    
+    
+    <Image 
+      Source="{StaticResource im_EntryBackground}" 
+      Aspect="Fill"
+      AbsoluteLayout.LayoutBounds="0.5, 0.670, 0.791, 0.0987" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Image 
+      
+      Source="{StaticResource im_LogoTwitter}" 
+      Aspect="AspectFit" 
+      AbsoluteLayout.LayoutBounds="0.87, 0.670, 0.14, 0.09" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Label 
+      Style="{StaticResource style_Label_Login001}"
+      Text="Twitter"
+      XAlign="Start"
+      YAlign="Center" 
+      VerticalOptions="Center" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.670, 0.67, 0.0987" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <BoxView AbsoluteLayout.LayoutBounds="0.5, 0.68, 0.75, 0.1" Color="Transparent" AbsoluteLayout.LayoutFlags="All"/>
+    
+    
+    <Image 
+      Source="{StaticResource im_EntryBackground}"
+      Aspect="Fill" 
+      AbsoluteLayout.LayoutBounds="0.5, 0.787, 0.791, 0.0987"
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Image 
+      Source="{StaticResource im_LogoLinkenId}"
+      Aspect="AspectFit" 
+      AbsoluteLayout.LayoutBounds="0.87, 0.787, 0.14, 0.09"
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Label 
+      Style="{StaticResource style_Label_Login001}"
+      Text="LinkedId"
+      XAlign="Start"
+      YAlign="Center" 
+      VerticalOptions="Center"
+      AbsoluteLayout.LayoutBounds="0.5, 0.787, 0.67, 0.0987" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <!--BoxView AbsoluteLayout.LayoutBounds="0.5, 0.81, 0.7, 0.08" Color="Red" AbsoluteLayout.LayoutFlags="All"/-->
+    
+    <BoxView 
+      Color="{StaticResource color_003}" 
+      AbsoluteLayout.LayoutBounds="0.11, 0.88, 0.37, 0.002" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Label 
+      Style="{StaticResource style_Label_Login001}"
+      Text="Or"
+      XAlign="Center" 
+      YAlign="Center"
+      AbsoluteLayout.LayoutBounds="0.5, 0.910, 0.1, 0.08" 
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <BoxView 
+      Color="{StaticResource color_003}" 
+      AbsoluteLayout.LayoutBounds="0.89, 0.88, 0.37, 0.002"
+      AbsoluteLayout.LayoutFlags="All"/>
+    
+    <Button 
+      Style="{StaticResource style_Button_Login001}"
+      Text="Login" 
+      Clicked="OnButtonClicked_Login"
+      AbsoluteLayout.LayoutBounds="0.26, 0.993, 0.30, 0.1" 
+      AbsoluteLayout.LayoutFlags="All"/>
+
+    
+    
+    <Button 
+      Style="{StaticResource style_Button_Login001}"
+      Text="Sign up" 
+      Clicked="OnButtonClicked_SignUp"
+      AbsoluteLayout.LayoutBounds="0.785, 0.993, 0.30, 0.1" 
+      AbsoluteLayout.LayoutFlags="All"/>
+  </AbsoluteLayout>
+  
+</ContentPage>
