@@ -114,7 +114,8 @@
       Text="Login" 
       Clicked="OnButtonClicked_Login"
       AbsoluteLayout.LayoutBounds="0.26, 0.993, 0.30, 0.1" 
-      AbsoluteLayout.LayoutFlags="All"/>
+      AbsoluteLayout.LayoutFlags="All"
+      StyleId="MyButton"/>
 
     
     
