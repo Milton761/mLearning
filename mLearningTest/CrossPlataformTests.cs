@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
+using NUnit.Framework;
 
 namespace mLearningTest
 {
@@ -19,8 +20,9 @@ namespace mLearningTest
         [TestMethod]
         public void TestCase()
         {
-
+            app.Repl();
         }
+
     }
 
     
