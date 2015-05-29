@@ -8,11 +8,15 @@
   <AbsoluteLayout Style="{StaticResource style_AbsoluteLayout}">
 
     <Image 
+      x:Name="_LogoEdutic"
+      StyleId="LogoEdutic"
       Source="{StaticResource im_LogoEdutic}"
       AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.25, 0.25"
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Label
+      x:Name="_label_Conectwith"
+      StyleId="label_Conectwith"
       Style="{StaticResource style_Label_Login}"
       Text="Conectar con"
       XAlign="Center" 
@@ -20,18 +24,24 @@
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Image 
+      x:Name="_entry_BackgroundFacebook"
+      StyleId="entry_BackgroundFacebook"
       Source="{StaticResource im_EntryBackground}" 
       Aspect="Fill" 
       AbsoluteLayout.LayoutBounds="0.5, 0.553, 0.791, 0.0987" 
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Image 
+      x:Name="_entry_LogoFacebook"
+      StyleId="entry_LogoFacebook"
       Source="{StaticResource im_LogoFacebook}" 
       Aspect="AspectFit" 
       AbsoluteLayout.LayoutBounds="0.87, 0.553, 0.14, 0.09"
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Label 
+      x:Name="_label_Facebook"
+      StyleId="label_Facebook"
       Style="{StaticResource style_Label_Login001}"
       Text="Facebook"
       XAlign="Start" 
@@ -43,20 +53,25 @@
     <!--BoxView AbsoluteLayout.LayoutBounds="0.5, 0.55, 0.75, 0.1" Color="Red" AbsoluteLayout.LayoutFlags="All"/-->
     
     
-    <Image 
+    <Image
+      x:Name="_entry_BackgroundTwitter"
+      StyleId="entry_BackgroundTwitter"
       Source="{StaticResource im_EntryBackground}" 
       Aspect="Fill"
       AbsoluteLayout.LayoutBounds="0.5, 0.670, 0.791, 0.0987" 
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Image 
-      
+      x:Name="_entry_LogoTwitter"
+      StyleId="entry_LogoTwitter"
       Source="{StaticResource im_LogoTwitter}" 
       Aspect="AspectFit" 
       AbsoluteLayout.LayoutBounds="0.87, 0.670, 0.14, 0.09" 
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Label 
+      x:Name="_label_Twitter"
+      StyleId="label_Twitter"
       Style="{StaticResource style_Label_Login001}"
       Text="Twitter"
       XAlign="Start"
@@ -69,18 +84,24 @@
     
     
     <Image 
+      x:Name="_entry_BackgroundLinkenId"
+      StyleId="entry_BackgroundLinkenId"
       Source="{StaticResource im_EntryBackground}"
       Aspect="Fill" 
       AbsoluteLayout.LayoutBounds="0.5, 0.787, 0.791, 0.0987"
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Image 
+      x:Name="_entry_LogoLinkenId"
+      StyleId="entry_LogoLinkenId"
       Source="{StaticResource im_LogoLinkenId}"
       Aspect="AspectFit" 
       AbsoluteLayout.LayoutBounds="0.87, 0.787, 0.14, 0.09"
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Label 
+      x:Name="_label_LinkenId"
+      StyleId="label_LinkenId"
       Style="{StaticResource style_Label_Login001}"
       Text="LinkedId"
       XAlign="Start"
@@ -97,6 +118,8 @@
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Label 
+      x:Name="_label_Or"
+      StyleId="label_Or"
       Style="{StaticResource style_Label_Login001}"
       Text="Or"
       XAlign="Center" 
@@ -110,16 +133,20 @@
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Button 
+      x:Name="_btn_Login"
+      StyleId="btn_Login"
       Style="{StaticResource style_Button_Login001}"
       Text="Login" 
       Clicked="OnButtonClicked_Login"
       AbsoluteLayout.LayoutBounds="0.26, 0.993, 0.30, 0.1" 
       AbsoluteLayout.LayoutFlags="All"
-      StyleId="MyButton"/>
+      />
 
     
     
     <Button 
+      x:Name="_btn_SignUp"
+      StyleId="btn_SignUp"
       Style="{StaticResource style_Button_Login001}"
       Text="Sign up" 
       Clicked="OnButtonClicked_SignUp"
