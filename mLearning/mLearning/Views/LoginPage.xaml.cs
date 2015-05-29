@@ -15,6 +15,29 @@ namespace mLearning.Views
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            this.Animate("", new Animation(), 0, 0, Easing.Linear, null, null);
+         
+
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            this.Animate("", new Animation(), 0, 0, Easing.Linear, null, null);
+         
+
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            base.OnBackButtonPressed();
+            this.Animate("", new Animation(), 0, 0, Easing.Linear, null, null);
+            return true;
+        }
+
         async void OnTapGestureRecognizerEnterButton(object sender, EventArgs args)
         {
             await Navigation.PushModalAsync(new MasterDetailMainPage());
@@ -23,6 +46,7 @@ namespace mLearning.Views
         async void OnButtonClicked_SignUp(object sender, EventArgs args)
         {
             await Navigation.PushModalAsync(new SignUpPage());
+            
         }
     }
 }
