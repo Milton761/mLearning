@@ -9,6 +9,8 @@
 
     
     <Image
+      x:Name="_im_Camera"
+      StyleId="im_Camera"
       Source="photo200.png"
       AbsoluteLayout.LayoutBounds="0.5, 0.06, 0.25, 0.25" 
       AbsoluteLayout.LayoutFlags="All">
@@ -23,12 +25,16 @@
 
 
     <Image 
+      x:Name="_entry_BackgroundUsuario"
+      StyleId="entry_BackgroundUsuario"
        Source="{StaticResource im_EntryBackground}" 
        Aspect="Fill" 
        AbsoluteLayout.LayoutBounds="0.5, 0.315, 0.791, 0.0987"
        AbsoluteLayout.LayoutFlags="All"/>
     
     <local:CustomEntry 
+      x:Name="_entry_Usuario"
+      StyleId="entry_Usuario"
       Placeholder="Usuario"
       TextColor="#E6E6E6"
       HorizontalOptions="Start" 
@@ -36,12 +42,16 @@
       AbsoluteLayout.LayoutFlags="All"/>
 
     <Image 
+      x:Name="_entry_BackgroundContrasenha"
+      StyleId="entry_BackgroundContrasenha"
       Source="{StaticResource im_EntryBackground}" 
       Aspect="Fill" 
       AbsoluteLayout.LayoutBounds="0.5, 0.432, 0.791, 0.0987" 
       AbsoluteLayout.LayoutFlags="All"/>
     
     <local:CustomEntry 
+      x:Name="_entry_Contrasenha"
+      StyleId="entry_Contrasenha"
       Placeholder="Contraseña"
       TextColor="#E6E6E6" 
       IsPassword="True"
@@ -50,12 +60,16 @@
       AbsoluteLayout.LayoutFlags="All"/>
 
     <Image 
+      x:Name="_entry_BackgroundCorreo"
+      StyleId="entry_BackgroundCorreo"
       Source="{StaticResource im_EntryBackground}" 
       Aspect="Fill" 
       AbsoluteLayout.LayoutBounds="0.5, 0.549, 0.791, 0.0987" 
       AbsoluteLayout.LayoutFlags="All"/>
     
     <local:CustomEntry
+      x:Name="_entry_Correo"
+      StyleId="entry_Correo"
       Placeholder="Correo" 
       TextColor="#E6E6E6"
       HorizontalOptions="Start" 
@@ -63,12 +77,16 @@
       AbsoluteLayout.LayoutFlags="All"/>
 
     <Image 
+      x:Name="_entry_BackgroundNombre"
+      StyleId="entry_BackgroundNombre"
       Source="{StaticResource im_EntryBackground}" 
       Aspect="Fill"
       AbsoluteLayout.LayoutBounds="0.5, 0.666, 0.791, 0.0987"
       AbsoluteLayout.LayoutFlags="All"/>
     
     <local:CustomEntry
+      x:Name="_entry_Nombre"
+      StyleId="entry_Nombre"
       Placeholder="Nombre" 
       TextColor="#E6E6E6"
       HorizontalOptions="Start" 
@@ -78,26 +96,19 @@
     
 
 
-    <Image
-      Source="{StaticResource im_EntryBackground}"
-      Aspect="Fill"
-      AbsoluteLayout.LayoutBounds="0.5, 0.900, 0.791, 0.0987"
-      AbsoluteLayout.LayoutFlags="All"/>
 
-    <local:CustomEntry
-      Placeholder="Apellido"
-      TextColor="#E6E6E6"
-      HorizontalOptions="Start"
-      AbsoluteLayout.LayoutBounds="0.3, 0.900, 0.5, 0.0987"
-      AbsoluteLayout.LayoutFlags="All"/>
 
     <Image
+      x:Name="_entry_BackgroundApellido"
+      StyleId="entry_BackgroundApellido"
       Source="{StaticResource im_EntryBackground}"
       Aspect="Fill"
       AbsoluteLayout.LayoutBounds="0.5, 0.783, 0.791, 0.0987"
       AbsoluteLayout.LayoutFlags="All"/>
 
     <local:CustomEntry
+      x:Name="_entry_Apellido"
+      StyleId="entry_Apellido"
       Placeholder="Apellido"
       TextColor="#E6E6E6"
       HorizontalOptions="Start"
@@ -107,12 +118,16 @@
 
     
     <Image
+      x:Name="_entry_BackgroundSoyProfesor"
+      StyleId="entry_BackgroundSoyProfesor"
       Source="{StaticResource im_EntryBackground}"
       Aspect="Fill"
       AbsoluteLayout.LayoutBounds="0.5, 0.900, 0.791, 0.0987"
       AbsoluteLayout.LayoutFlags="All"/>
     
     <Label 
+      x:Name="_label_SoyProfesor"
+      StyleId="label_SoyProfesor"
       AbsoluteLayout.LayoutBounds="0.25, 0.900, 0.35, 0.0987" 
       FontFamily="Helvetica Neue" 
       FontSize="Medium" 
@@ -124,6 +139,7 @@
 
     <Image 
       x:Name="CheckBoxImage" 
+      StyleId="CheckBoxImage"
       Source="{StaticResource im_CheckBoxImageOff}" 
       AbsoluteLayout.LayoutBounds="0.54, 0.895, 0.08, 0.08" 
       Aspect="AspectFit" 
@@ -138,6 +154,8 @@
     </Image>
 
     <Image     
+      x:Name="_im_EnterButton"
+      StyleId="im_EnterButton"
       Source="{StaticResource im_EnterButton}" 
       Aspect="AspectFit"
       AbsoluteLayout.LayoutBounds="0.87, 0.895, 0.14, 0.09" 
