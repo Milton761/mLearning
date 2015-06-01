@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin;
 using Xamarin.Forms;
+
 
 namespace mLearning.Views
 {
@@ -18,6 +19,8 @@ namespace mLearning.Views
 
         protected override void OnAppearing()
         {
+
+            Insights.Track("ConnectedLogiPage Appearing");
             base.OnAppearing();
             this.Animate("",new Animation(),0,0, Easing.Linear, null, null);
             _LogoEdutic.RotateTo(90);
@@ -26,6 +29,7 @@ namespace mLearning.Views
 
         protected override void OnDisappearing()
         {
+            Insights.Track("ConnectedLogiPage Disappearing");
             base.OnDisappearing();
             this.Animate("",new Animation(),0,0, Easing.Linear, null, null);
             _LogoEdutic.RotateTo(-90);
